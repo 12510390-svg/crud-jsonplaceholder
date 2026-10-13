@@ -1,0 +1,209 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f7fc;
+  color: #27243a;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  color: #7c3aed;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.header h1 {
+  margin: 10px 0;
+  font-size: clamp(30px, 5vw, 42px);
+}
+
+.header > p:last-child {
+  color: #77738a;
+}
+
+.form-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px #28204a0a;
+  margin-bottom: 24px;
+}
+
+.form-card h2,
+.posts-section h2 {
+  margin-top: 0;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-card label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dedbe8;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  border-color: #8b5cf6;
+}
+
+.form-card textarea {
+  resize: vertical;
+}
+
+.form-actions,
+.post-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.primary-button,
+.secondary-button,
+.edit-button,
+.delete-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.primary-button {
+  background: #7c3aed;
+  color: white;
+}
+
+.secondary-button {
+  background: #eeeaf5;
+  color: #393348;
+}
+
+.message {
+  padding: 12px 16px;
+  background: #ede9fe;
+  color: #5b21b6;
+  border-radius: 8px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 32px 0 16px;
+}
+
+.section-heading span {
+  color: #77738a;
+  font-size: 14px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.post-card {
+  background: white;
+  padding: 20px;
+  border: 1px solid #eeeaf5;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px #28204a08;
+  overflow-wrap: anywhere;
+}
+
+.post-id {
+  color: #7c3aed;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.post-card h3 {
+  text-transform: capitalize;
+  line-height: 1.5;
+}
+
+.post-card > p {
+  color: #77738a;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.edit-button {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.delete-button {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 32px;
+  color: #77738a;
+  background: white;
+  border-radius: 12px;
+}
+
+footer {
+  text-align: center;
+  color: #8b879a;
+  font-size: 13px;
+  padding: 32px 0 8px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 94%;
+    padding-top: 20px;
+  }
+
+  .form-card {
+    padding: 18px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+}
